@@ -1,0 +1,101 @@
+:root {
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray-700: hsl(0, 0%, 20%);
+  --clr-gray-800: hsl(0, 0%, 12%);
+  --clr-gray-900: hsl(0, 0%, 8%);
+
+  --ff-base-size: 14px;
+  --scale: 1.125;
+
+  --ff-size: var(--ff-base-size);
+  --h6: calc(var(--ff-size) * var(--scale));
+  --h5: calc(var(--h6) * var(--scale));
+  --h4: calc(var(--h5) * var(--scale));
+  --h3: calc(var(--h4) * var(--scale));
+  --h2: calc(var(--h3) * var(--scale));
+  --h1: calc(var(--h2) * var(--scale));
+  --ff-small: calc(var(--ff-size) / var(--scale));
+  --ff-x-small: calc(var(--ff-small) / var(--scale));
+
+  --ff-regular: 400;
+  --ff-semi-bold: 600;
+  --ff-bold: 700;
+
+  --ff: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-gray-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  font: normal var(--ff-regular) var(--ff-size) var(--ff);
+  color: var(--clr-white);
+  background-color: var(--clr-gray-800);
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 300px;
+
+  @media (max-width: 375px) {
+    min-width: 90vw;
+  }
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile__picture {
+  --img-size: 60px;
+  border-radius: 50%;
+  width: var(--img-size);
+  height: var(--img-size);
+}
+
+.profile__title {
+  font-size: var(--h5);
+  font-weight: var(--ff-bold);
+  margin: 0.75rem 0 0.35rem 0;
+}
+
+.profile__location {
+  color: var(--clr-green);
+  font-weight: var(--ff-semi-bold);
+  font-size: var(--ff-x-small);
+  margin: 0;
+}
+
+.profile__resume {
+  font-size: var(--ff-x-small);
+  margin: 1.25rem 0;
+}
+
+.social-links {
+  padding: 0;
+}
+
+.social-links__link {
+  list-style-type: none;
+  text-align: center;
+  font-weight: var(--ff-semi-bold);
+  font-size: var(--ff-small);
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  background-color: var(--clr-gray-700);
+  border-radius: 5px;
+}
+
+.social-links__link:hover {
+  cursor: pointer;
+  background-color: var(--clr-green);
+  color: var(--clr-gray-900);
+}
